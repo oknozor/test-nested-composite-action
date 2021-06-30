@@ -1,0 +1,15 @@
+name: 'Test action'
+description: 'Run multiple actions'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  random-number:
+    description: "Random number"
+runs:
+  using: "composite"
+  steps:
+    - run: actions/checkout@v2
+
